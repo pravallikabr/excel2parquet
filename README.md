@@ -30,11 +30,9 @@ pip --version
 
 Create the virtual environment in the root of the cloned project:
 ```bash
-```
 python3.6 -m venv .venv
 ```
 ```windows
-```
 pip install virtualenv
 virtualenv .venv
 ```
@@ -54,11 +52,9 @@ source ./.venv/bin/activate
 
 This will install some of the packages you might find useful:
 ```bash
-```
 pip install -r ./requirements.txt
 ```
 ```windows
-```
 pip install -r .\requirements.txt
 ```
 #### Excel2Parquet (PANDAS)
@@ -90,25 +86,20 @@ Excel files are expected to be placed in this folder
 
 #### Running tests to ensure everything is working correctly
 ```bash
-```
 pytest ./tests
 ```
 ```windows
-```
 pytest .\tests
 ```
-
 #### OUTPUT
 
 #### Execution of main program
 
 Parquet file will be generated with *.parquet extension in this folder once below command is executed.
 ```bash
-```
 ./main/excel2parquet.py
 ```
 ```windows
-```
 .\main\excel2parquet.py
 ```
 
@@ -117,11 +108,9 @@ Parquet file will be generated with *.parquet extension in this folder once belo
 running below command from repo root will give you the max temperature record with
 ScreenTemparature, Date, Region columns
 ```bash
-```
 ./main/get_max_temp_rec.py
 ```
 ```windows
-```
 .\main\get_max_temp_rec.py
 ```
 
