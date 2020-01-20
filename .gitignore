@@ -133,5 +133,4 @@ dmypy.json
 .venv
 .idea/
 output/
-
-
+.tool-versions

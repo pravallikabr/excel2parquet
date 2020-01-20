@@ -1,9 +1,8 @@
-import excel2parquet
 from tabulate import tabulate
 import glob
 import pandas as pd
-import pyarrow
 import argparse
+import sys
 
 def read_parquet_folder(parquet_folder):
     parquet_files = glob.glob("{}/*.parquet".format(parquet_folder))
@@ -24,10 +23,10 @@ def get_max_rec(file_path):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='DataTest')
-    parser.add_argument('--input_location', required=False, default="./input/")
     parser.add_argument('--output_location', required=False, default="./output/")
     args = vars(parser.parse_args())
     parquet_files = glob.glob("{}/*.parquet".format(args['output_location']))
     if len(parquet_files) < 1:
-        excel2parquet.to_parquet(args['input_location'],args['output_location'])
+        print("kindly run excel2parquet.py python program from main module and try again!")
+        sys.exit()
     get_max_rec(args['output_location'])
